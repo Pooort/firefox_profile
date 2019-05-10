@@ -15,13 +15,6 @@ capabilities["moz:firefoxOptions"] = {
     "args": ["--profile", profile_path]
 }
 
-"""
-File.ReadAllText(profliePath + "/prefs.js"), 
-  "marionette.port\", (\\d+?)" + Regex.Escape(")"))
-  .Groups[1]
-  .Value;
-"""
-
 
 def get_marionette_port(profile_path):
     prefs_path = os.path.join(profile_path, 'prefs.js')
